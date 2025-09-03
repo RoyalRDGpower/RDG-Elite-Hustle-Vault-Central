@@ -1,9 +1,133 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Landing Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RDG | Elite Hustle Vault Central</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function showThankYou(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          document.getElementById('form-section').innerHTML = `
+            <div class='text-center p-6 bg-gray-800 rounded-2xl shadow-lg animate-fadeIn'>
+              <h3 class='text-2xl font-bold text-yellow-500 mb-4'>Thank You!</h3>
+              <p class='text-gray-300'>Your message has been sent successfully. I’ll get back to you soon.</p>
+            </div>`;
+        } else {
+          alert('Oops! Something went wrong. Please try again later.');
+        }
+      }).catch(() => {
+        alert('Oops! Something went wrong. Please try again later.');
+      });
+    }
+  </script>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 0.8s ease-out;
+    }
+  </style>
 </head>
-<body>
-<h1>Welcome to the Landing Page!</h1>
-<!-- Add your landing page content here -->
+<body class="bg-black text-white font-sans">
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex flex-col items-center justify-center text-center bg-black">
+    <img src="b16156ff-d386-4bf5-aaac-708681177229.png" alt="Logo" class="w-40 mb-6" />
+    <h1 class="text-4xl md:text-6xl font-bold text-yellow-500">RDG Elite Hustle Vault Central</h1>
+    <p class="mt-4 text-lg md:text-xl max-w-2xl text-gray-300">
+      Transforming Ideas into Powerful Words — Article & Blog Writing That Inspires and Converts.
+    </p>
+    <div class="mt-8 flex space-x-4">
+      <a href="mailto:eliteevault@gmail.com" class="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-2xl shadow-lg hover:bg-yellow-400 transition">Hire Me</a>
+      <a href="#contact" class="px-6 py-3 border border-yellow-500 text-yellow-500 font-semibold rounded-2xl hover:bg-yellow-500 hover:text-black transition">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-20 px-6 bg-gradient-to-b from-black to-gray-900 text-center">
+    <h2 class="text-3xl font-bold text-yellow-500 mb-6">About Me</h2>
+    <p class="max-w-3xl mx-auto text-gray-300">
+      I’m a professional article and blog writer with a passion for creating engaging, well-researched, and SEO-friendly content. With experience across niches such as technology, business, lifestyle, health, and more, I help brands and individuals communicate their stories and expertise powerfully.
+    </p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 px-6 bg-black text-center">
+    <h2 class="text-3xl font-bold text-yellow-500 mb-10">My Services</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+      <div class="p-6 bg-gray-900 rounded-2xl shadow-lg hover:shadow-yellow-500/40">
+        <h3 class="text-xl font-semibold text-yellow-400 mb-3">Article & Blog Writing</h3>
+        <p class="text-gray-400">Engaging, well-structured, and SEO-optimized content that connects with readers.</p>
+      </div>
+      <div class="p-6 bg-gray-900 rounded-2xl shadow-lg hover:shadow-yellow-500/40">
+        <h3 class="text-xl font-semibold text-yellow-400 mb-3">Website Copywriting</h3>
+        <p class="text-gray-400">Clear, persuasive, and conversion-driven copy tailored to your brand.</p>
+      </div>
+      <div class="p-6 bg-gray-900 rounded-2xl shadow-lg hover:shadow-yellow-500/40">
+        <h3 class="text-xl font-semibold text-yellow-400 mb-3">Research-Based Writing</h3>
+        <p class="text-gray-400">Well-researched and fact-checked articles that provide depth and authority.</p>
+      </div>
+      <div class="p-6 bg-gray-900 rounded-2xl shadow-lg hover:shadow-yellow-500/40">
+        <h3 class="text-xl font-semibold text-yellow-400 mb-3">Editing & Proofreading</h3>
+        <p class="text-gray-400">Refining content for accuracy, readability, and originality.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section class="py-20 px-6 bg-gradient-to-b from-gray-900 to-black text-center">
+    <h2 class="text-3xl font-bold text-yellow-500 mb-10">Published Articles</h2>
+    <div class="space-y-6 max-w-3xl mx-auto">
+      <div class="p-6 bg-gray-800 rounded-2xl shadow-md text-left">
+        <h3 class="text-xl font-semibold text-yellow-400">New Dawn in Cancer Treatment: University Breakthrough</h3>
+        <p class="text-gray-400 mt-2">A detailed breakdown of groundbreaking cancer treatment research and its global impact.</p>
+        <a href="https://elitehustlevaultcentral.blogspot.com/2025/08/new-dawn-in-cancer-treatment-university.html" target="_blank" class="inline-block mt-4 text-yellow-500 hover:underline">Published on Elite Hustle Vault Central →</a>
+      </div>
+      <div class="p-6 bg-gray-800 rounded-2xl shadow-md text-left">
+        <h3 class="text-xl font-semibold text-yellow-400">Top 5 Technology Trends Reshaping 2025</h3>
+        <p class="text-gray-400 mt-2">Breakdown of the latest innovations in technology and how they impact everyday life and business.</p>
+        <a href="#" target="_blank" class="inline-block mt-4 text-yellow-500 hover:underline">Published on Elite Hustle Vault Central →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="py-20 px-6 bg-black text-center">
+    <h2 class="text-3xl font-bold text-yellow-500 mb-6">Intro Video</h2>
+    <div class="max-w-4xl mx-auto aspect-w-16 aspect-h-9">
+      <iframe class="w-full h-96 rounded-2xl shadow-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-gradient-to-b from-gray-900 to-black text-center">
+    <h2 class="text-3xl font-bold text-yellow-500 mb-6">Contact Me</h2>
+    <p class="text-gray-300 mb-8">Have a project in mind? Let’s work together! Reach out via email or drop a message below.</p>
+    <p class="text-yellow-400 font-semibold mb-4">Email: eliteevault@gmail.com</p>
+
+    <div id="form-section">
+      <form action="https://formspree.io/f/maylpkny" method="POST" onsubmit="showThankYou(event)" class="max-w-xl mx-auto space-y-4 text-left">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-xl bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+        <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-xl bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+        <textarea name="message" rows="5" placeholder="Your Message" required class="w-full px-4 py-3 rounded-xl bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+        <button type="submit" class="w-full py-3 bg-yellow-500 text-black font-semibold rounded-xl hover:bg-yellow-400 transition">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-black text-center border-t border-gray-800">
+    <p class="text-gray-500">© 2025 RDG Elite Hustle Vault Central. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
