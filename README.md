@@ -1,22 +1,40 @@
+# 🕵️‍♂️ RDG Elite Hustle Vault Central: CYBER PORTAL
 
-# 🎖️ DOD CYBER COMMAND PORTAL  
-*Secure Intelligence Transmission Interface*  
-**TOP SECRET//NOFORN**  
+**Secure Communication & Cyber Ops Toolkit**
 
-![CLASSIFIED PREVIEW](https://i.imgur.com/TACTICAL.png) *(Upload screenshot after deployment)*  
+![CYBER PORTAL PREVIEW](https://i.imgur.com/TACTICAL.png) *(Replace with your actual screenshot after deployment)*
 
-## 📡 LIVE DEPLOYMENT  
-➡️ **Active Mission URL**:  
-https://royalrdgpower.github.io/DoD-cyber-portal/  
+---
 
-## ⚔️ TACTICAL CAPABILITIES  
-- AES-256 Encrypted Message Simulation  
-- Military-Grade Dark Ops Interface  
-- DOD Authentication Protocol (Fictional)  
-- Cyber Threat Intelligence Dashboard  
+## 🚀 LIVE DEMO
 
-## 🚨 RED FLAG PROTOCOL  
-```diff
-- WARNING: This is a training simulation  
-- Not connected to actual DOD networks  
-- For ethical cybersecurity education only  
+➡️ **Access the Portal:**  
+[RDG CYBER_portal.html](https://github.com/RoyalRDGpower/RDG-Elite-Hustle-Vault-Central/blob/main/RDG%20CYBER_portal.html)
+
+---
+
+## 🛡️ FEATURES
+
+- Secure Contact & Messaging Form (powered by Formspree)
+- Elite-themed cyber ops interface
+- Encrypted message simulation (UI roleplay only)
+- Customizable for digital hustlers, cyber teams, or secure client comms
+- Responsive neon cyberpunk design
+
+---
+
+## 📬 CONTACT
+
+To reach the RDG Elite team directly, use the portal form or email:  
+**elitevault@gmail.com**
+
+---
+
+## ⚠️ NOTICE
+
+This is a fictional/cyber-themed portal for creative, educational, and digital networking use only.  
+*Not connected to any government or sensitive infrastructure.*
+
+---
+
+> **Built and maintained by [RoyalRDGpower](https://github.com/RoyalRDGpower)**
