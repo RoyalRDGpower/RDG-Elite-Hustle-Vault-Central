@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RDG Elite Cyber Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #101820;
+      color: #e5f6d0;
+      font-family: 'Share Tech Mono', 'Consolas', 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 420px;
+      margin: 60px auto;
+      background: rgba(16,24,32,0.98);
+      border: 2px solid #4bff7b;
+      border-radius: 13px;
+      box-shadow: 0 0 38px #00ff6a59;
+      padding: 36px 24px 20px 24px;
+    }
+    h1 {
+      text-align: center;
+      letter-spacing: 2px;
+      color: #4bff7b;
+      font-size: 2.1em;
+      margin-bottom: 8px;
+      text-shadow: 0 0 6px #00ff6a77;
+    }
+    .divider {
+      border-bottom: 1.5px dashed #4bff7b;
+      margin: 16px 0 20px 0;
+    }
+    .contact-info {
+      margin-bottom: 26px;
+      font-size: 1.13em;
+      text-align: center;
+    }
+    .contact-info strong {
+      color: #4bff7b;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    label {
+      font-size: 1em;
+      color: #e5f6d0;
+      margin-bottom: 3px;
+      letter-spacing: 1px;
+    }
+    input, textarea {
+      background: #142425;
+      color: #4bff7b;
+      border: 1.5px solid #4bff7b;
+      border-radius: 5px;
+      padding: 9px;
+      font-size: 1em;
+      font-family: inherit;
+      transition: box-shadow 0.2s;
+      outline: none;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #63ff9e99;
+      font-style: italic;
+      letter-spacing: 1px;
+    }
+    input:focus, textarea:focus {
+      box-shadow: 0 0 10px #00ff6a80;
+      border-color: #00ff6a;
+    }
+    textarea {
+      min-height: 66px;
+      resize: vertical;
+    }
+    .submit-btn {
+      margin-top: 6px;
+      background: linear-gradient(90deg, #15ff5c, #026b3c);
+      color: #101820;
+      border: none;
+      font-size: 1.08em;
+      font-weight: bold;
+      letter-spacing: 2px;
+      border-radius: 5px;
+      padding: 11px 0;
+      cursor: pointer;
+      box-shadow: 0 0 18px #00ff6a50;
+      transition: background 0.2s, color 0.2s;
+    }
+    .submit-btn:hover {
+      background: linear-gradient(90deg, #026b3c, #15ff5c);
+      color: #fff;
+    }
+    .github-link {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+    }
+    .github-btn {
+      text-decoration: none;
+      background: #24292f;
+      color: #4bff7b;
+      border: 2px solid #4bff7b;
+      border-radius: 7px;
+      padding: 10px 24px;
+      font-size: 1.1em;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      box-shadow: 0 0 10px #00ff6a33;
+      transition: background 0.2s, color 0.2s;
+    }
+    .github-btn:hover {
+      background: #4bff7b;
+      color: #101820;
+      border-color: #101820;
+    }
+    .github-icon {
+      width: 21px;
+      fill: currentColor;
+    }
+    @media (max-width: 500px) {
+      .container { padding: 16px 4vw; }
+      h1 { font-size: 1.3em; }
+    }
+    .success-message {
+      color: #4bff7b;
+      background: #142425;
+      border: 1.5px solid #4bff7b;
+      border-radius: 5px;
+      padding: 12px;
+      margin-bottom: 20px;
+      text-align: center;
+      display: none;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>RDG ELITE CYBER PORTAL</h1>
+    <div class="divider"></div>
+    <div class="contact-info">
+      <strong>Email:</strong>
+      <a href="mailto:elitevault@gmail.com" style="color:#63ff9e;text-decoration:underline;">elitevault@gmail.com</a>
+    </div>
+    <div class="success-message" id="success-message">
+      Message sent! Check your email for confirmation. <br>
+      (If this is your first message, you may need to verify your address with Formspree.)
+    </div>
+    <form id="cyberForm" action="https://formspree.io/f/xzzakwag" method="POST" autocomplete="off">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter codename or alias..." autocomplete="off" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your contact email (optional)" autocomplete="off">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Enter your secure message here..." required></textarea>
+
+      <button type="submit" class="submit-btn">TRANSMIT MESSAGE</button>
+    </form>
+    <div class="github-link">
+      <a class="github-btn" href="https://github.com/RoyalRDGpower" target="_blank" rel="noopener">
+        <svg class="github-icon" viewBox="0 0 24 24"><path d="M12.026 2c-5.505 0-9.974 4.468-9.974 9.974 0 4.406 2.865 8.142 6.839 9.465.5.091.682-.217.682-.482 0-.237-.009-.864-.014-1.696-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.909-.62.069-.608.069-.608 1.004.07 1.532 1.031 1.532 1.031.892 1.528 2.341 1.087 2.91.832.091-.646.35-1.087.636-1.338-2.22-.253-4.555-1.111-4.555-4.943 0-1.091.389-1.984 1.029-2.683-.104-.253-.446-1.269.098-2.646 0 0 .84-.27 2.75 1.025a9.563 9.563 0 0 1 2.5-.336c.849.004 1.705.115 2.504.337 1.909-1.296 2.747-1.025 2.747-1.025.546 1.377.204 2.393.1 2.646.64.699 1.027 1.592 1.027 2.683 0 3.841-2.338 4.687-4.566 4.935.358.308.678.918.678 1.852 0 1.336-.012 2.416-.012 2.744 0 .267.18.577.688.479C19.138 20.113 22 16.378 22 11.974 22 6.468 17.531 2 12.026 2Z"/></svg>
+        GITHUB
+      </a>
+    </div>
+  </div>
+  <script>
+    // Formspree success handler (basic, no backend)
+    document.getElementById('cyberForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = this;
+      var data = new FormData(form);
+      var xhr = new XMLHttpRequest();
+      xhr.open(form.method, form.action, true);
+      xhr.setRequestHeader('Accept', 'application/json');
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+          document.getElementById('success-message').style.display = 'block';
+          form.reset();
+        } else {
+          alert('Message failed to send. Try again or email elitevault@gmail.com directly.');
+        }
+      };
+      xhr.send(data);
+    });
+  </script>
+</body>
+</html>
+
